@@ -1,5 +1,6 @@
-## Firebase in React
-Provide Firebase in React with an Firebase's Authentication API for Sign Up with React and Firebase.
+## React & Firebase
+
+Provide a real-world application using React and Firebase. React is used to display applications in web browsers and to store local state in components, while Firebase is used for authentication, authorization, and managing a realtime database.
 
 ## Requirements:
 React 16.7
