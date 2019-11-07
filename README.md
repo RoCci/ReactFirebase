@@ -1,3 +1,12 @@
+## React & Firebase
+
+This is a Boilerplate for a real-world application using React and Firebase. React is used to display applications in web browsers and to store local state in components, while Firebase is used for authentication, authorization, and managing a realtime database.
+
+## Requirements:
+React 16.7
+React Router 4
+Firebase 4
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
