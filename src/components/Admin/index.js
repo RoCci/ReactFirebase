@@ -46,10 +46,12 @@ class AdminPage extends Component {
         loading: false,
       });
     });
+   
   }
 
   componentWillUnmount() {
     this.props.firebase.users().off();
+   
   }
 
   render() {

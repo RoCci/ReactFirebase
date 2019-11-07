@@ -16,6 +16,7 @@ const LandingPage = () => (
 const INITIAL_STATE = {
   name: '',
   data: '',
+  file: '',
   error: null
 };
 
@@ -29,14 +30,14 @@ class PutFormBase extends Component {
   }
 
   onSubmit = event => {
-    const {name, data} = this.state;
+    const {name, data, file} = this.state;
 
     this
       .props
       .firebase
       .data()
       .push()
-      .set({name, data})
+      .set({name, data, file})
       .then(() => {
         this.setState({
           ...INITIAL_STATE
@@ -60,7 +61,7 @@ class PutFormBase extends Component {
   };
 
   render() {
-    const {name, data, error} = this.state;
+    const {name, data, file, error} = this.state;
 
     return (
       <form onSubmit={this.onSubmit}>
@@ -75,6 +76,12 @@ class PutFormBase extends Component {
           value={data}
           onChange={this.onChange}
           type="text"
+          placeholder="Email Address" />
+        <input
+          name="file"
+          value={file}
+          onChange={this.onChange}
+          type="file"
           placeholder="Email Address"/>
         <button type="submit">
           Sign Up
@@ -85,6 +92,9 @@ class PutFormBase extends Component {
     );
   }
 }
+
+
+
 
 const PutForm = withRouter(withFirebase(PutFormBase));
 export {PutForm};
