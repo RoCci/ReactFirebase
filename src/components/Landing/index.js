@@ -76,7 +76,7 @@ class PutFormBase extends Component {
           value={data}
           onChange={this.onChange}
           type="text"
-          placeholder="Email Address" />
+          placeholder="Email Address"/>
         <input
           name="file"
           value={file}
@@ -92,9 +92,6 @@ class PutFormBase extends Component {
     );
   }
 }
-
-
-
 
 const PutForm = withRouter(withFirebase(PutFormBase));
 export {PutForm};
